@@ -1,0 +1,21 @@
+- name: Clone bashcount repository
+  git:
+    repo: "{{ repository }}"
+    dest: "{{ working_dir }}"
+    version: 'HEAD'
+- name: Install bashmount
+  copy:
+    src: "{{ working_dir }}/bashmount"
+    dest: /usr/bin/bashmount
+    mode: 755
+- name: Deploy system-wide configuration
+  copy:
+    src: "{{ working_dir }}/bashmount.conf"
+    dest: /etc/bashmount.conf
+    mode: 644
+- name: Deploy documentation
+  archive:
+    src: "{{ working_dir }}/bashmount.1"
+    dest: /usr/share/man/man1/bashmount.1.gz
+    format: gz
+    mode: 644
