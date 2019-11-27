@@ -1,0 +1,43 @@
+#+TITLE: Bashmount Ansible Role
+
+* WARNING
+  :PROPERTIES:
+  :ID:       c3eab56c-2c85-4fdf-89fd-1aa7a553200d
+  :END:
+  Do not rely on the code blindly, it as not been tested yet.
+
+* Installation
+  :PROPERTIES:
+  :ID:       76e78283-dbc1-4f9d-ae78-8c9d259ecc0d
+  :END:
+  Ad this repository as a role directory inside an existing ansible
+  project.
+* Usage
+  :PROPERTIES:
+  :ID:       c24225df-7a43-4c71-8d3b-860861d6f456
+  :END:
+  The following variable can be overloaded in your playbook:
+  - =repository=, the repository of bashmount. [Default:
+    https://github.com/jamielinux/bashmount.git]
+  - =working_dir=, the working directory where to clone the
+    repository. [Default: /usr/local/src]
+
+  The role is to be execute as the root user on the target hosts.
+
+** Example playbook
+   :PROPERTIES:
+   :ID:       893abaf1-0eaf-4b2a-9f1e-80e507e47e0d
+   :END:
+
+   #+begin_example
+     ---
+     - host: all
+       gather_facts: False
+       tasks:
+         - name: Deploy bashmount
+           include_role:
+             name: bashmount
+           vars:
+             repository: https://github.com/montaropdf/my-bashmount-fork.git
+             working_dir: /var/lib/src/git_repos
+   #+end_example

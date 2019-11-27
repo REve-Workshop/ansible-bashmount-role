@@ -1,2 +1,2 @@
 repository: https://github.com/jamielinux/bashmount.git
-working_dir: .local/share
+working_dir: /usr/local/src
