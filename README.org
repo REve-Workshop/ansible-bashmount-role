@@ -1,11 +1,21 @@
-#+TITLE: Bashmount Ansible Role
+#+TITLE: Bashmount Installation Ansible Role
 
 * WARNING
   :PROPERTIES:
   :ID:       c3eab56c-2c85-4fdf-89fd-1aa7a553200d
   :END:
   Do not rely on the code blindly, it as not been tested yet.
+* Introduction
+  :PROPERTIES:
+  :ID:       291031ad-dea7-46a7-9621-1badf5f0f588
+  :END:
+  This Ansible role allows to install or update an existing bashmount
+  application.
 
+  This role expects:
+  - All bashmount dependencies to be present on the system.
+  - The target to have an access to the repositories containing the
+    sources of mu.
 * Installation
   :PROPERTIES:
   :ID:       76e78283-dbc1-4f9d-ae78-8c9d259ecc0d
