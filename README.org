@@ -10,7 +10,7 @@
   :PROPERTIES:
   :ID:       76e78283-dbc1-4f9d-ae78-8c9d259ecc0d
   :END:
-  Ad this repository as a role directory inside an existing ansible
+  Add this repository as a role directory inside an existing ansible
   project.
 * Usage
   :PROPERTIES:
@@ -20,7 +20,7 @@
   - =repository=, the repository of bashmount. [Default:
     https://github.com/jamielinux/bashmount.git]
   - =working_dir=, the working directory where to clone the
-    repository. [Default: /usr/local/src]
+    repository. [Default: /usr/local/src/bashmount]
 
   The role is to be execute as the root user on the target hosts.
 
@@ -39,5 +39,5 @@
              name: bashmount
            vars:
              repository: https://github.com/montaropdf/my-bashmount-fork.git
-             working_dir: /var/lib/src/git_repos
+             working_dir: /var/lib/src/git_repos/bashmount
    #+end_example
