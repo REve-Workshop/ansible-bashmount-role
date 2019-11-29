@@ -1,4 +1,4 @@
-#+TITLE: Bashmount Installation Ansible Role
+#+TITLE: Ansible Role for Bashmount Installation
 
 * WARNING
   :PROPERTIES:
@@ -9,7 +9,7 @@
   :PROPERTIES:
   :ID:       291031ad-dea7-46a7-9621-1badf5f0f588
   :END:
-  This Ansible role allows to install or update an existing bashmount
+  This Ansible role allows to install or update the bashmount
   application.
 
   This role expects:
@@ -32,13 +32,11 @@
   - =working_dir=, the working directory where to clone the
     repository. [Default: /usr/local/src/bashmount]
 
-  The role is to be execute as the root user on the target hosts.
-
+  The role is to be executed as the root user on the target hosts.
 ** Example playbook
    :PROPERTIES:
    :ID:       893abaf1-0eaf-4b2a-9f1e-80e507e47e0d
    :END:
-
    #+begin_example
      ---
      - host: all
